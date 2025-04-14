@@ -1,0 +1,18 @@
+<!-- npm i react-json-to-excel -->
+   <!-- "@headlessui/react": "^2.2.0",
+    "axios": "^1.8.4",
+    "clsx": "^2.1.1",
+    "file-saver": "^2.0.5",
+    "firebase": "^11.6.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-firebase-hooks": "^5.1.1",
+    "react-hook-form": "^7.55.0",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^7.4.1",
+    "recharts": "^2.15.1",
+    "sonner": "^2.0.2",
+    "uuid": "^11.1.0",
+    "xlsx": "^0.18.5",
+    "zod": "^3.24.2",
+    "zustand": "^5.0.3" -->
