@@ -6,7 +6,6 @@ import {IoSearchOutline} from 'react-icons/io5'
 import {MdAdd} from "react-icons/md"
 import {CiExport} from "react-icons/ci"
 import { IoCheckmarkDoneCircle } from "react-icons/io5";
-import {exportToExcel} from "react-json-to-excel"
 import DateRange from "../components/date-range"
 import api from "../utils/apiCall";
 import { formatCurrency } from '../utils';
@@ -98,14 +97,6 @@ const Transactions = () => {
                 <MdAdd size={22}/>
                 <span>Pay</span>
               </button>
-
-              <button
-                onClick={()=>exportToExcel(data,`Transactions ${startDate}-${endDate}`)}
-                className='flex items-center gap-2 text-black dark:text-gray-300'
-              >
-                Export <CiExport size={24}/>
-              </button>
-
             </div>
         </div>
         <div className='overflow-x-auto mt-5'>
