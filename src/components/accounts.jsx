@@ -52,7 +52,7 @@ const Accounts = ({data}) => {
 
             <div>
               <p className='text-xl text-black dark:text-gray-400 font-medium'>
-                ${formatCurrency(item.account_balance)}
+                {formatCurrency(item.account_balance)}
               </p>
               <span className='text-sm text-gray-600 dark:text-violet-700'>
                 Account Balance

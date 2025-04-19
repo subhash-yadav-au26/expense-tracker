@@ -2,7 +2,6 @@ import React from 'react';
 import {BsCashCoin, BsCurrencyDollar} from "react-icons/bs";
 import {SiCashapp} from "react-icons/si";
 import {formatCurrency} from "../utils/index"
-// import  formatCurrency from "../utils";
 import {Card} from "./ui/card"
 
 const ICON_STYLES = [

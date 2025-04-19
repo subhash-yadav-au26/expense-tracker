@@ -3,7 +3,7 @@ import Title from "./title";
 import { RiProgress3Line } from "react-icons/ri";
 import { IoCheckmarkDoneCircle } from "react-icons/io5";
 import { TiWarning } from "react-icons/ti";
-
+import {formatCurrency} from "../utils/index"
 const Transactions = ({data}) => {  
   return (
     <div className='py-20 w-full md:w-2/3'>
@@ -61,7 +61,7 @@ const Transactions = ({data}) => {
 
                 <td className='py-2 px-2'>{item.source}</td>
                 <td className='py-2 px-2 text-black dark:text-gray-400 text-base font-medium'>
-                  ${item.amount}.00
+                  {formatCurrency(item.amount)}
                 </td>
               </tr>
             ))}

@@ -7,7 +7,6 @@ import {
 import {signOut} from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import {MdOutlineKeyboardArrowDown } from "react-icons/md";
-import { RiCurrencyFill } from "react-icons/ri";
 import {Link, useLocation } from "react-router-dom";
 import { auth } from "../../utils/firebaseConfig"
 import useStore from "../../store/index"
@@ -23,7 +22,7 @@ const links = [
 
 const Navbar = () => {
   const [selected, setSelected] = useState(0);
-  const {signOut:userLogOut,user} = useStore((state)=>state) 
+  const {signOut:userLogOut, user} = useStore((state)=>state) 
   const { pathname } = useLocation();
   
   useEffect(()=>{
@@ -33,7 +32,8 @@ const Navbar = () => {
 
   const logout = async () => {
     try {
-      await signOut(auth);
+      localStorage.removeItem("user")
+      await signOut(auth);      
       userLogOut()
     } catch (error) {
       console.error('Error logging out:', error.message);
@@ -86,10 +86,10 @@ const Navbar = () => {
             <MenuItems
               transition
               anchor="bottom end"
-              className="w-52 origin-top-right rounded-xl border border-white/5 bg-white/5 p-1 text-sm/6 text-white transition duration-100 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0"
+               className="w-52 origin-top-right rounded-xl border border-white/5 bg-white text-gray-800 dark:bg-white/5 dark:text-gray-300 p-1 text-sm/6 transition duration-100 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0"
             >
               <MenuItem>
-                <button className="group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-[focus]:bg-white/10" onClick={logout}>
+                <button  className="group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 text-gray-800 dark:text-gray-300 hover:bg-black/5 dark:hover:bg-white/10" onClick={logout}>
                   Log out
                 </button>
               </MenuItem>
